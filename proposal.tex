@@ -1,0 +1,72 @@
+\documentclass[11pt]{article} % Loads settings for the document layout
+
+
+\newif\ifenglish
+
+\englishtrue%Comment this out for english version.
+
+\usepackage[T1]{fontenc}
+
+\usepackage[utf8]{inputenc}
+
+
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=25mm,
+ right=25mm,
+ top=25mm,
+ bottom=25mm,
+ }
+\usepackage{setspace}
+ \doublespacing
+
+ 
+\usepackage{gensymb}
+
+\usepackage{graphicx}
+
+% \usepackage{bibtex}
+
+% Preamble
+
+% The following settings are used for title generation and will show up in the
+% main document where the \maketitle command is set.
+\ifenglish
+    \title{We spy on birds. \thanks{working title} }
+\else 
+    \title{Við hlerum fugla}
+\fi
+
+\date{\today}
+\author{Benedikt H. Thordarson \and Dr. Jacqueline Clare Mallett }
+
+
+% Main document
+
+\begin{document} % The document starts here
+
+\maketitle % Creates the titlepage
+
+\pagenumbering{arabic} % Turns on page numbering
+\begin{center}
+    \ifenglish
+        \textit{A proposal to violate the privacy of forest dwelling birds.} \\
+    \else
+        \textit{Icelandic text here} 
+    \fi
+\end{center}
+\noindent\rule{\linewidth}{\arrayrulewidth}
+
+    \ifenglish     
+        \input{src/English.tex}
+    \else
+        todo this!
+    \fi
+
+\bibliography{src/Citations.bib}{}
+\bibliographystyle{plain}
+
+
+\end{document}
