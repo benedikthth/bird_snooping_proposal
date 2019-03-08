@@ -28,7 +28,53 @@
     \cite{ratasuk2016overview}, a low-power communications 
     technology, report the findings to a centralized location.
      
-    
+    \subsection{Example Device}
+
+    Since we need a relatively powerful device for the signal
+    processing, an 
+    acceptable choice would be the Raspberry pi, 
+    (\href{https://www.raspberrypi.org/}{www.raspberrypi.org/}),
+    using a NB-IoT shield 
+    (\href{https://www.seeedstudio.com/Dragino-NB-IoT-Shield-B5-p-3082.html}{Dragino NB IoT Shield}
+    ,
+    \href{https://sixfab.com/product/raspberry-pi-nb-iot-shield/}{Sixfab NB-IoT shield}
+    or
+    \href{https://eu.mouser.com/ProductDetail/DFRobot/DFR0505?qs=sGAEpiMZZMve4%2FbfQkoj%252BBXWRlp4a5ROxBo2Cyn%252BqlY%3D}{Similar shield from mouser}
+    )
+
+    These parts can be rather expensive, but it is 
+    likely that Siminn can supply us with some shields. 
+
+    % To monitor the bird life, 
+    We will also need a microphone to monitor the bird song.
+    Which micorphone is sufficiently sensitive enough
+    to capture the frequencies we are interested in is
+    worth some looking into. 
+    (
+        \href{https://www.adafruit.com/product/1064}{Adafruit 20Hz - 20KHz mic}, 
+        or
+        \href{https://www.adafruit.com/product/3421}{Adafruit 50Hz - 15KHz mic}
+    )
+
+    To power our devices, a battery is needed.
+    % I don't really know how hard/easy it is to get 
+    % batteries into iceland.
+    An example shield 
+    (
+        \href{https://sixfab.com/product/raspberry-pi-nb-iot-shield/}{Sixfab NB-IoT shield}
+    ) 
+    typically consume about 220mA while transmitting 
+    at its full power, and 2mA while idling.
+
+    The Raspberry Pi 3 B+ will at 400\% load stress consume 
+    about 980 mA.
+
+    I leave the microphone out of this count-up, since it does
+    not consume a lot of power. 
+
+    To power the raspberry, we need battery that can 
+    output 5V.
+
     
 
 \section{Expected value}
